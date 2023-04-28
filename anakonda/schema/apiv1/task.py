@@ -1,14 +1,14 @@
-from ....anakonda.anakonda import ma
-from ....anakonda.model import Task
+from ...anakonda import ma
+from ...model import Task
 
 
-class TaskSchema(ma.SQLAchemySchema):
+class TaskSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Task
-
+    
     id = ma.auto_field(dump_only=True)
     name = ma.auto_field()
-    namespace = ma.auto_field()
+    namespace =ma.auto_field()
     runtime = ma.auto_field()
     created_at = ma.auto_field(dump_only=True)
     last_update_at = ma.auto_field(dump_only=True)
