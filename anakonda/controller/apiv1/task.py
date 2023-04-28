@@ -1,3 +1,4 @@
+from ...model import Task
 from ...util import jsonify
 
 
